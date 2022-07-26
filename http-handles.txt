@@ -1,11 +1,3 @@
-/repositories/2/digital_objects/40168
-/repositories/2/digital_objects/40170
-/repositories/2/digital_objects/40172
-/repositories/2/digital_objects/40173
-/repositories/2/digital_objects/40175
-/repositories/2/digital_objects/40177
-/repositories/2/digital_objects/40179
-/repositories/2/digital_objects/40180
 /repositories/2/digital_objects/40181
 /repositories/2/digital_objects/40182
 /repositories/2/digital_objects/40183
