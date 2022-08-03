@@ -46,13 +46,13 @@ func main() {
 	for scanner.Scan() {
 		repoID, doID, err := aspace.URISplit(scanner.Text())
 		if err != nil {
-			log.Printf("[ERROR] %s", err.Error())
+			log.Printf("[ERROR] %s", strings.ReplaceAll(err.Error(), "\n", " "))
 			continue
 		}
 
 		do, err := client.GetDigitalObject(repoID, doID)
 		if err != nil {
-			log.Printf("[ERROR] %s", err.Error())
+			log.Printf("[ERROR] %s", strings.ReplaceAll(err.Error(), "\n", " "))
 			continue
 		}
 		oldFileVersions := do.FileVersions
@@ -69,11 +69,10 @@ func main() {
 
 		msg, err := client.UpdateDigitalObject(repoID, doID, do)
 		if err != nil {
-			log.Printf("[ERROR] %s", err.Error())
+			log.Printf("[ERROR] %s", strings.ReplaceAll(err.Error(), "\n", " "))
 			continue
 		}
 		log.Printf("%s\t%s", do.URI, strings.ReplaceAll(msg, "\n", ""))
-
 	}
 
 }
