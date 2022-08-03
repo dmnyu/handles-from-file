@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"flag"
+	"fmt"
 	"github.com/nyudlts/go-aspace"
 	"log"
 	"os"
@@ -44,6 +45,7 @@ func main() {
 
 	scanner := bufio.NewScanner(inFile)
 	for scanner.Scan() {
+		fmt.Println(scanner.Text())
 		repoID, doID, err := aspace.URISplit(scanner.Text())
 		if err != nil {
 			log.Printf("[ERROR] %s", strings.ReplaceAll(err.Error(), "\n", " "))
